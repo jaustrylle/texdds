@@ -181,7 +181,7 @@ body, html {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-top: 25px;
+  margin-top: 95px;
 }
 
 .slide-text {
@@ -372,3 +372,4 @@ blockquote {
   .hero-carousel .overlay h1 { font-size: 2rem; }
   .hero-carousel .overlay p { font-size: 1rem; }
 }
+
