@@ -1,0 +1,129 @@
+#location_list ul {
+    list-style-type: circle;
+}
+
+.accordion-group {
+    background: #E9E6E1;
+}
+
+.accordion-heading .accordion-toggle {
+    color: #00175D;
+    font-weight: bold;
+}
+
+.accordion-inner {
+    color: #00175D;
+}
+
+
+
+
+.ui-state-default .ui-icon{
+    background: url("../img/accordion.png") no-repeat scroll 0 0px rgba(0, 0, 0, 0);
+}
+
+.ui-state-active .ui-icon {
+    background: url("../img/accordion.png") no-repeat scroll 0 -18px rgba(0, 0, 0, 0);
+}
+
+#accordion {
+    font: 13px/22px 'Lato',sans-serif;
+}
+
+#accordion h3 {
+    color: #00175D;
+    font: bold 14px/22px 'Lato',sans-serif;
+    text-rendering: optimizelegibility;
+    text-transform: uppercase;
+}
+
+#accordion p {
+    color: #00175D;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: url("../img/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;
+}
+
+@media (max-width: 767px) {
+    [class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] {
+        float: left;
+        width: auto;
+    }
+}
+
+.header{
+    background: #03143A;
+    height: 96px;
+}
+
+.menu_wrap {
+    margin-top: 30px;
+
+}
+
+@media (max-width: 979px) {
+    .header {
+        height: 155px;
+    }
+    nav#main_menu select {
+
+    }
+}
+
+
+
+.tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.tp-caption.bg {
+    background: #03143A;
+    padding: 18px 22px 22px;
+}
+
+.tp-caption2.bg {
+    background: #03143A;
+    padding: 18px 22px 22px;
+}
+
+h1.title {
+    color: #A40F0F;
+    margin-bottom: 0px;
+}
+
+h1.intro {
+    color: #03143A;
+}
+
+/***********************************/
+
+
+
+
+/***********************************/
+.menu_wrap .nav > li > a:hover, .menu_wrap .nav > li > a:focus {
+
+    color:#A40F0F;
+    -webkit-border-radius: 4px 4px 0px 0px;
+    -moz-border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
+}
+/***********************************/
+
+#banner{background-image:url(../img/topFlagII.jpg)!important;}
+
+.menu_wrap .nav > li {
+    width: 95px;
+}
+
+.menu_wrap .nav li a {
+    font-size: 11px;
+}
+
+
+
+.videowrapper { float: none; clear: both; width: 100%; position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; }
+.videowrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
