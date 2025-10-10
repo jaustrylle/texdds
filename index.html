@@ -18,38 +18,43 @@
 
 
 
-  <!-- Google Fonts -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" type="text/css">
 
-<!-- Bootstrap & Theme CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/theme.css" rel="stylesheet">
-<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
-<link href="css/zocial.css" rel="stylesheet" type="text/css">
-<link href="css/settings.css" rel="stylesheet" type="text/css">
-<link href="css/google-places.css" rel="stylesheet" type="text/css">
+<!-- Core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/theme.css" rel="stylesheet">
+<link href="assets/css/prettyPhoto.css" rel="stylesheet">
+<link href="assets/css/zocial.css" rel="stylesheet">
+<link href="assets/css/settings.css" rel="stylesheet">
+<link href="assets/css/google-places.css" rel="stylesheet">
 
-<!-- Optional: Your custom styles -->
-<link href="css/styles.css" rel="stylesheet">
+<!-- Optional override or custom CSS -->
+<link href="assets/css/override.css" rel="stylesheet">
 
 <!-- jQuery and Plugins -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/google-places.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/carousel.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/js/jquery.themepunch.plugins.min.js"></script>
+<script src="assets/js/superfish.js"></script>
+<script src="assets/js/scripts.js"></script>
 
-<!-- Google Places Initialization -->
+<!-- Google Places -->
+<script src="assets/js/google-places.js"></script>
+
 <script>
-  jQuery(document).ready(function($) {
-    $("#google-reviews").googlePlaces({
-      placeId: 'ChIJgXTlZLblV4YRJJJo4kV2By4',
-      render: ['reviews'],
-      min_rating: 5,
-      max_rows: 1
-    });
+jQuery(document).ready(function($) {
+  $("#google-reviews").googlePlaces({
+    placeId: 'ChIJgXTlZLblV4YRJJJo4kV2By4',
+    render: ['reviews'],
+    min_rating: 5,
+    max_rows: 1
   });
+});
 </script>
 
 <style>
