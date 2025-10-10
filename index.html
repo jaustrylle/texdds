@@ -926,13 +926,17 @@ jQuery(document).ready(function($){
 <script>
 $(document).ready(function() {
   $('.fullwidthbanner').revolution({
-    delay: 7000,
-    startwidth: 1170,
+    delay: 6000,
+    startwidth: 1400,
     startheight: 550,
     hideThumbs: 10,
+    navigationType: "bullet",
+    navigationArrows: "solo",
+    navigationStyle: "round",
+    touchenabled: "on",
+    onHoverStop: "on",
     fullWidth: "on",
-    forceFullWidth: "on",
-    navigationStyle: "round"
+    shadow: 0
   });
 });
 </script>
