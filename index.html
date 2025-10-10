@@ -33,29 +33,8 @@
 <!-- Optional override or custom CSS -->
 <link href="assets/css/override.css" rel="stylesheet">
 
-<!-- jQuery and Plugins -->
+<!-- jQuery -->
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.prettyPhoto.js"></script>
-<script src="assets/js/jquery.touchSwipe.min.js"></script>
-<script src="assets/js/jquery.themepunch.plugins.min.js"></script>
-<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
-<script src="assets/js/superfish.js"></script>
-<script src="assets/js/scripts.js"></script>
-
-<!-- Google Places -->
-<script src="assets/js/google-places.js"></script>
-
-<script>
-jQuery(document).ready(function($) {
-  $("#google-reviews").googlePlaces({
-    placeId: 'ChIJgXTlZLblV4YRJJJo4kV2By4',
-    render: ['reviews'],
-    min_rating: 5,
-    max_rows: 1
-  });
-});
-</script>
 
 <style>
 
@@ -844,15 +823,34 @@ html {margin-top:33px !important;}
 
 <!-- SCRIPTS -->
 
-
-
-<script src="assets/js/jquery.js"></script>
-
+<!-- Core JS -->
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.themepunch.plugins.min.js"></script>
+<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/jquery.mousewheel.min.js"></script>
+<script src="assets/js/superfish.js"></script>
+<script src="assets/js/scripts.js"></script>
 
-<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+<!-- Revolution Slider Init -->
+<script>
+jQuery(document).ready(function($){
+  if ($.fn.cssOriginal !== undefined) $.fn.css = $.fn.cssOriginal;
+  
+  $('.fullwidthbanner').revolution({
+    delay: 9000,
+    startwidth: 1170,
+    startheight: 550,
+    onHoverStop: "on",
+    navigationType: "bullet",
+    touchenabled: "on",
+    fullWidth: "on",
+    shadow: 0
+  });
+});
+</script>
 
-<script type="text/javascript" src="assets/js/jquery.themepunch.plugins.min.js"></script>
 
 <!-- slider settings -->
 
