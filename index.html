@@ -19,52 +19,39 @@
 
 
   <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" type="text/css">
 
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/css" rel="stylesheet" type="text/css">
+<!-- Bootstrap & Theme CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="css/zocial.css" rel="stylesheet" type="text/css">
+<link href="css/settings.css" rel="stylesheet" type="text/css">
+<link href="css/google-places.css" rel="stylesheet" type="text/css">
 
-  <!--[if IE]>
+<!-- Optional: Your custom styles -->
+<link href="css/styles.css" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<!-- jQuery and Plugins -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/google-places.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/carousel.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
-
-  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
-
-  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
-
-  <![endif]-->
-
-
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/bootstrap.css" rel="stylesheet">
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/font-awesome.min.css" rel="stylesheet">
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/theme.css" rel="stylesheet">
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/prettyPhoto.css" rel="stylesheet" type="text/css">
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/zocial.css" rel="stylesheet" type="text/css">
-
-  <link href="./Texas Online Defensive Driving School, TEA Approved_files/settings.css" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="./Texas Online Defensive Driving School, TEA Approved_files/font-awesome(1).min.css">
-
-<link rel="stylesheet" href="./Texas Online Defensive Driving School, TEA Approved_files/google-places.css">
-<script async="" src="./Texas Online Defensive Driving School, TEA Approved_files/gtm.js.download"></script><script src="./Texas Online Defensive Driving School, TEA Approved_files/jquery.min.js.download"></script>
-<script src="./Texas Online Defensive Driving School, TEA Approved_files/google-places.js.download"></script>
-<script src="./Texas Online Defensive Driving School, TEA Approved_files/js"></script><script type="text/javascript" charset="UTF-8" src="./Texas Online Defensive Driving School, TEA Approved_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Texas Online Defensive Driving School, TEA Approved_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Texas Online Defensive Driving School, TEA Approved_files/log.js.download"></script>
-
+<!-- Google Places Initialization -->
 <script>
-jQuery(document).ready(function( $ ) {
-   $("#google-reviews").googlePlaces({
-        placeId: 'ChIJgXTlZLblV4YRJJJo4kV2By4' 
-      , render: ['reviews']
-      , min_rating: 5
-      , max_rows:1
-   });
-});
+  jQuery(document).ready(function($) {
+    $("#google-reviews").googlePlaces({
+      placeId: 'ChIJgXTlZLblV4YRJJJo4kV2By4',
+      render: ['reviews'],
+      min_rating: 5,
+      max_rows: 1
+    });
+  });
 </script>
+
 <style>
 
 .review-item {
