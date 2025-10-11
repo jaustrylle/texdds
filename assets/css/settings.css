@@ -817,3 +817,56 @@ website:   	https://www.themepunch.com
 						 -webkit-transform-origin: 50% 50%;
 					}
 
+/* Mirror Randy and Student symmetrically */
+.tp-caption.randy,
+.tp-caption.student {
+  position: absolute !important;
+  top: 35px !important;
+  z-index: 10;
+  transform: translateY(0);
+}
+
+/* Randy (far left, mirrored) */
+.tp-caption.randy {
+  left: 10% !important;         /* further left */
+  transform: translateX(-50%) !important;
+}
+
+/* Student (far right, mirrored) */
+.tp-caption.student {
+  right: 10% !important;        /* further right */
+  transform: translateX(50%) !important;
+}
+
+/* Optional: make them scale gracefully on smaller screens */
+@media (max-width: 1200px) {
+  .tp-caption.randy,
+  .tp-caption.student {
+    transform: none !important;
+    left: 5% !important;
+    right: 5% !important;
+  }
+  .tp-caption.randy img,
+  .tp-caption.student img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-caption.randy,
+  .tp-caption.student {
+    position: relative !important;
+    display: block;
+    margin: 0 auto;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    text-align: center;
+  }
+  .tp-caption.randy img,
+  .tp-caption.student img {
+    width: 65%;
+  }
+}
+
