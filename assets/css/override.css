@@ -123,6 +123,38 @@ h1.intro {
     font-size: 11px;
 }
 
+/* Adjust positioning of Randy and Texas A&M student images */
+.tp-caption.randy {
+  position: absolute !important;
+  left: 50px !important;    /* move him inward from left edge */
+  top: 35px !important;
+  z-index: 10;
+}
+
+.tp-caption.student {
+  position: absolute !important;
+  right: 50px !important;   /* move her inward from right edge */
+  top: 35px !important;
+  z-index: 10;
+}
+
+/* Optional: make them responsive */
+@media (max-width: 992px) {
+  .tp-caption.randy,
+  .tp-caption.student {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tp-caption.randy img,
+  .tp-caption.student img {
+    width: 70%;
+    height: auto;
+  }
+}
 
 
 .videowrapper { float: none; clear: both; width: 100%; position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; }
