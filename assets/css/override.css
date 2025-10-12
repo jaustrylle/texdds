@@ -168,3 +168,9 @@ h1.intro {
   margin: 0 !important;
   float: none !important;
 }
+
+/* Texas A&M Student- slide in from right, no vanish after cycling */
+.tp-caption.lfr.start {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
