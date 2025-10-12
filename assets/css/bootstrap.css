@@ -1495,7 +1495,7 @@ textarea.span1,
 }
 
 /* -------------------------------------------------------- */
-
+/* Gray background, disable pointer interaction for disabled/read-only form elements */
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -1506,6 +1506,7 @@ textarea[readonly] {
   background-color: #eeeeee;
 }
 
+/* Transparent radio/checkbox backgrounds for all */
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][readonly],
@@ -1513,6 +1514,7 @@ input[type="checkbox"][readonly] {
   background-color: transparent;
 }
 
+/* Each variant styles form fields based on validation feedback */
 .control-group.warning .control-label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
@@ -1669,6 +1671,7 @@ input[type="checkbox"][readonly] {
   border-color: #3a87ad;
 }
 
+/* Highlight invalid fields with red tones and soft glow */
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
@@ -1685,6 +1688,7 @@ select:focus:invalid:focus {
           box-shadow: 0 0 6px #f8b9b7;
 }
 
+/* Style container for form buttons/actions, clearfix via :before and :after */
 .form-actions {
   padding: 19px 20px 20px;
   margin-top: 20px;
@@ -1705,6 +1709,7 @@ select:focus:invalid:focus {
   clear: both;
 }
 
+/* Styles for inline and block help messages near form fields */
 .help-block,
 .help-inline {
   color: #595959;
@@ -1723,6 +1728,7 @@ select:focus:invalid:focus {
   *zoom: 1;
 }
 
+/* Layout and Font */
 .input-append,
 .input-prepend {
   display: inline-block;
@@ -1732,6 +1738,7 @@ select:focus:invalid:focus {
   vertical-align: middle;
 }
 
+/* Ensure inputs align with add-ons, remove bottom margin & set rounded corners */
 .input-append input,
 .input-prepend input,
 .input-append select,
@@ -1881,8 +1888,8 @@ select:focus:invalid:focus {
   margin-left: 0;
 }
 
-------fdas-----------------------------------------------
-
+/* -------------------------------------------------------- */
+/* Create rounded search input with consistent padding, \9 hack for IE7-8 compatiblity */
 input.search-query {
   padding-right: 14px;
   padding-right: 4px \9;
@@ -1898,6 +1905,7 @@ input.search-query {
 
 /* Allow for input prepend/append in search forms */
 
+/* Remove default rounding when inputs grouped with buttons/icons */
 .form-search .input-append .search-query,
 .form-search .input-prepend .search-query {
   -webkit-border-radius: 0;
@@ -2004,6 +2012,7 @@ legend + .control-group {
   -webkit-margin-top-collapse: separate;
 }
 
+/* 2-column layout, label on left & input on right */
 .form-horizontal .control-group {
   margin-bottom: 20px;
   *zoom: 1;
@@ -2055,6 +2064,7 @@ legend + .control-group {
   padding-left: 180px;
 }
 
+/* Table Styling */
 table {
   max-width: 100%;
   background-color: transparent;
@@ -2209,6 +2219,8 @@ table {
   background-color: #f5f5f5;
 }
 
+/* -------------------------------------------------------- */
+/* General Span Behavior */
 table td[class*="span"],
 table th[class*="span"],
 .row-fluid table td[class*="span"],
@@ -2302,6 +2314,7 @@ table th[class*="span"],
   margin-left: 0;
 }
 
+/* Contextual background colors to rows based on status */
 .table tbody tr.success > td {
   background-color: #dff0d8;
 }
@@ -2318,6 +2331,7 @@ table th[class*="span"],
   background-color: #d9edf7;
 }
 
+/* Hover Effects */
 .table-hover tbody tr.success:hover > td {
   background-color: #d0e9c6;
 }
@@ -2334,7 +2348,7 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 
-
+/* Dropdown containers, toggle behavior */
 .dropup,
 .dropdown {
   position: relative;
@@ -2349,6 +2363,7 @@ table th[class*="span"],
   outline: 0;
 }
 
+/* Caret Icon */
 .caret {
   display: inline-block;
   width: 0;
@@ -2365,6 +2380,7 @@ table th[class*="span"],
   margin-left: 2px;
 }
 
+/* Dropwdown Menu Box */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2397,6 +2413,7 @@ table th[class*="span"],
   left: auto;
 }
 
+/* Visual separator between dropdown items */
 .dropdown-menu .divider {
   *width: 100%;
   height: 1px;
@@ -2417,6 +2434,7 @@ table th[class*="span"],
   white-space: nowrap;
 }
 
+/* Hover and Active States */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
@@ -2449,6 +2467,8 @@ table th[class*="span"],
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
 }
 
+/* -------------------------------------------------------- */
+/* Disabled Items */
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
@@ -2468,6 +2488,7 @@ table th[class*="span"],
   *z-index: 1000;
 }
 
+/* Dropdown Visibility */
 .open > .dropdown-menu {
   display: block;
 }
@@ -2477,6 +2498,7 @@ table th[class*="span"],
   left: auto;
 }
 
+/* Dropup Support */
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
@@ -2491,6 +2513,7 @@ table th[class*="span"],
   margin-bottom: 1px;
 }
 
+/* Dropdown Submenus */
 .dropdown-submenu {
   position: relative;
 }
@@ -2549,11 +2572,13 @@ table th[class*="span"],
           border-radius: 6px 0 6px 6px;
 }
 
+/* Dropdown Utilities */
 .dropdown .dropdown-menu .nav-header {
   padding-right: 20px;
   padding-left: 20px;
 }
 
+/* Autocomplete suggestions */
 .typeahead {
   z-index: 1051;
   margin-top: 2px;
@@ -2562,6 +2587,7 @@ table th[class*="span"],
           border-radius: 4px;
 }
 
+/* Well Components */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -2595,6 +2621,7 @@ table th[class*="span"],
           border-radius: 3px;
 }
 
+/* Transitions -> fade and collapse */
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -2621,6 +2648,7 @@ table th[class*="span"],
   height: auto;
 }
 
+/* Close Button */
 .close {
   float: right;
   font-size: 20px;
@@ -2648,7 +2676,12 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
+
+ /* --------------------------------------------------------- */
+
  /* CHANGED TO NEW FLAT BUTTONS - KEEP THESE IF EVER UPDATING */
+
+ /* Base Button Styles */
 .btn {
   display: inline-block;
   *display: inline;
@@ -2677,6 +2710,8 @@ button.close {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+ /* Hover, Focus, Active, Disabled States */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -2721,6 +2756,8 @@ button.close {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+ /* Button Sizes and Icon Alignments */
 .btn-large {
   padding: 11px 19px;
   font-size: 17.5px;
@@ -2746,6 +2783,7 @@ button.close {
   font-size: 10.5px;
 }
 
+ /* Block-Level Buttons */
 .btn-block {
   display: block;
   width: 100%;
@@ -2775,6 +2813,8 @@ input[type="button"].btn-block {
   border-color: #c5c5c5;
   border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
 }
+
+ /* Contextual Button Variants */
 .btn-primary {
   color: #ffffff;
  
@@ -2799,6 +2839,8 @@ input[type="button"].btn-block {
 .btn-primary.active {
   background-color: #003399 \9;
 }
+
+ /* Warning */
 .btn-warning {
   color: #ffffff;
  
@@ -2823,6 +2865,8 @@ input[type="button"].btn-block {
 .btn-warning.active {
   background-color: #c67605 \9;
 }
+
+ /* Danger */
 .btn-danger {
   color: #ffffff;
  
@@ -2847,6 +2891,8 @@ input[type="button"].btn-block {
 .btn-danger.active {
   background-color: #942a25 \9;
 }
+
+ /* Success */
 .btn-success {
   color: #ffffff;
  
@@ -2871,6 +2917,8 @@ input[type="button"].btn-block {
 .btn-success.active {
   background-color: #408140 \9;
 }
+
+ /* Info */
 .btn-info {
   color: #ffffff;
  
@@ -2895,6 +2943,8 @@ input[type="button"].btn-block {
 .btn-info.active {
   background-color: #24748c \9;
 }
+
+ /* Inverse */
 .btn-inverse {
   color: #ffffff;
  
@@ -2944,6 +2994,8 @@ input[type="submit"].btn.btn-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
+
+ /* Link-Style Buttons */
 .btn-link,
 .btn-link:active,
 .btn-link[disabled] {
@@ -2967,6 +3019,8 @@ input[type="submit"].btn.btn-mini {
   color: #333333;
   text-decoration: none;
 }
+
+ /* Button Groups */
 .btn-group {
   position: relative;
   display: inline-block;
@@ -2986,6 +3040,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: 5px;
 }
 
+ /* Button Toolbar */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -2998,6 +3053,8 @@ input[type="submit"].btn.btn-mini {
   margin-left: 5px;
 }
 
+/* --------------------------------------------------------- */
+/* Ensure buttons in group flush with each other */
 .btn-group > .btn {
   position: relative;
   -webkit-border-radius: 0;
@@ -3015,6 +3072,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 14px;
 }
 
+/* Match button size variants with appropriate font sizes */
 .btn-group > .btn-mini {
   font-size: 10.5px;
 }
@@ -3067,6 +3125,7 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius-bottomright: 6px;
 }
 
+/* Interaction Layering */
 .btn-group > .btn:hover,
 .btn-group > .btn:focus,
 .btn-group > .btn:active,
@@ -3074,6 +3133,7 @@ input[type="submit"].btn.btn-mini {
   z-index: 2;
 }
 
+/* Dropdown Toggles in Button Groups */
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0;
@@ -3119,6 +3179,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 
+/* Contextual Dropdown Toggles */
 .btn-group.open .btn-primary.dropdown-toggle {
   background-color: #0044cc;
 }
@@ -3143,6 +3204,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #222222;
 }
 
+/* Caret Styling */
 .btn .caret {
   margin-top: 8px;
   margin-left: 0;
@@ -3167,6 +3229,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom-width: 5px;
 }
 
+/* White Carets for Contextual Buttons */
 .btn-primary .caret,
 .btn-warning .caret,
 .btn-danger .caret,
@@ -3177,6 +3240,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #ffffff;
 }
 
+/* Vertical Button Groups */
 .btn-group-vertical {
   display: inline-block;
   *display: inline;
@@ -3199,6 +3263,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: 0;
 }
 
+/* Rounded Corners for Top/Bottom Buttons */
 .btn-group-vertical > .btn:first-child {
   -webkit-border-radius: 4px 4px 0 0;
      -moz-border-radius: 4px 4px 0 0;
@@ -3223,6 +3288,7 @@ input[type="submit"].btn.btn-mini {
           border-radius: 0 0 6px 6px;
 }
 
+/* Base Styling- Alerts */
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
@@ -3250,6 +3316,7 @@ input[type="submit"].btn.btn-mini {
   line-height: 20px;
 }
 
+/* Contextual Variants for Success, Error & Info Messages */
 .alert-success {
   color: #468847;
   background-color: #dff0d8;
@@ -3282,6 +3349,7 @@ input[type="submit"].btn.btn-mini {
   color: #3a87ad;
 }
 
+/* Block Alerts */
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -3296,6 +3364,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 5px;
 }
 
+/* Base Styling for Navigation Lists */
 .nav {
   margin-bottom: 20px;
   margin-left: 0;
@@ -3320,6 +3389,7 @@ input[type="submit"].btn.btn-mini {
   float: right;
 }
 
+/* Headers and Dividers */
 .nav-header {
   display: block;
   padding: 3px 15px;
@@ -3352,6 +3422,7 @@ input[type="submit"].btn.btn-mini {
   padding: 3px 15px;
 }
 
+/* Active State- currenty active nav item */
 .nav-list > .active > a,
 .nav-list > .active > a:hover,
 .nav-list > .active > a:focus {
@@ -3375,6 +3446,8 @@ input[type="submit"].btn.btn-mini {
   border-bottom: 1px solid #ffffff;
 }
 
+/* --------------------------------------------------------- */
+/* Navigation Tabs and Pills */
 .nav-tabs,
 .nav-pills {
   *zoom: 1;
@@ -3407,6 +3480,7 @@ input[type="submit"].btn.btn-mini {
   line-height: 14px;
 }
 
+/* Tab Styling */
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
@@ -3440,6 +3514,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: transparent;
 }
 
+/* Pill Styling */
 .nav-pills > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -3457,6 +3532,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #0088cc;
 }
 
+/* Stack Navigation- Vertical Layout */
 .nav-stacked > li {
   float: none;
 }
@@ -3592,6 +3668,7 @@ input[type="submit"].btn.btn-mini {
   clear: both;
 }
 
+/* Tab Content Management */
 .tab-content {
   overflow: auto;
 }
@@ -3701,6 +3778,7 @@ input[type="submit"].btn.btn-mini {
   *border-left-color: #ffffff;
 }
 
+/* Disabled Navigation Items */
 .nav > .disabled > a {
   color: #999999;
 }
@@ -3712,6 +3790,7 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
 }
 
+/* Container and Inner Styling- Navbar */
 .navbar {
   *position: relative;
   *z-index: 2;
@@ -3761,6 +3840,7 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 
+/* Branding */
 .navbar .brand {
   display: block;
   float: left;
@@ -3812,6 +3892,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 0;
 }
 
+/* Navbar Form Styling */
 .navbar-form {
   margin-bottom: 0;
   *zoom: 1;
@@ -3859,6 +3940,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 0;
 }
 
+/* Navbar Search Box */
 .navbar-search {
   position: relative;
   float: left;
@@ -3878,6 +3960,9 @@ input[type="submit"].btn.btn-mini {
           border-radius: 15px;
 }
 
+/* --------------------------------------------------------- */
+
+/* Static Top Navbar */
 .navbar-static-top {
   position: static;
   margin-bottom: 0;
@@ -3889,6 +3974,7 @@ input[type="submit"].btn.btn-mini {
           border-radius: 0;
 }
 
+/* Fixed Top/Bottom Navbar */
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -3926,6 +4012,7 @@ input[type="submit"].btn.btn-mini {
   top: 0;
 }
 
+/* Container Width for Navbar Content */
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
@@ -3943,6 +4030,7 @@ input[type="submit"].btn.btn-mini {
           box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation Items */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -3968,6 +4056,7 @@ input[type="submit"].btn.btn-mini {
   text-shadow: 0 1px 0 #ffffff;
 }
 
+/* Navbar Caret Styling */
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
 }
@@ -4048,6 +4137,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 3px;
 }
 
+/* Navbar Dropdown Arrows */
 .navbar .nav > li > .dropdown-menu:before {
   position: absolute;
   top: -7px;
@@ -4140,6 +4230,9 @@ input[type="submit"].btn.btn-mini {
           border-radius: 6px 0 6px 6px;
 }
 
+/* --------------------------------------------------------- */
+
+/* Dark gradient background/border for Navbar */
 .navbar-inverse .navbar-inner {
   background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
@@ -4225,6 +4318,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #ffffff;
 }
 
+/* Inverse Search Box */
 .navbar-inverse .navbar-search .search-query {
   color: #ffffff;
   background-color: #515151;
@@ -4296,6 +4390,9 @@ input[type="submit"].btn.btn-mini {
   background-color: #000000 \9;
 }
 
+/* --------------------------------------------------------- */
+
+/* BreadCrumb Nvigation */
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 20px;
@@ -4322,6 +4419,7 @@ input[type="submit"].btn.btn-mini {
   color: #999999;
 }
 
+/* Pagination */
 .pagination {
   margin: 20px 0;
 }
@@ -4468,6 +4566,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 10.5px;
 }
 
+/* Pager Navigation */
 .pager {
   margin: 20px 0;
   text-align: center;
@@ -4526,6 +4625,9 @@ input[type="submit"].btn.btn-mini {
   background-color: #fff;
 }
 
+/* --------------------------------------------------------- */
+
+/* Modal Backdrop */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -4546,6 +4648,7 @@ input[type="submit"].btn.btn-mini {
   filter: alpha(opacity=80);
 }
 
+/* Modal Container */
 .modal {
   position: fixed;
   top: 10%;
@@ -4581,6 +4684,7 @@ input[type="submit"].btn.btn-mini {
   top: 10%;
 }
 
+/* Modal Header, Body & Footer */
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eee;
@@ -4645,6 +4749,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: 0;
 }
 
+/* Base Tooltip */
 .tooltip {
   position: absolute;
   z-index: 1030;
@@ -4693,6 +4798,7 @@ input[type="submit"].btn.btn-mini {
           border-radius: 4px;
 }
 
+/* Tooltip Arrows */
 .tooltip-arrow {
   position: absolute;
   width: 0;
@@ -4733,6 +4839,9 @@ input[type="submit"].btn.btn-mini {
   border-width: 0 5px 5px;
 }
 
+/* ---------------------------------- */
+
+/* Popover */
 .popover {
   position: absolute;
   top: 0;
@@ -4877,6 +4986,7 @@ input[type="submit"].btn.btn-mini {
   border-right-width: 0;
 }
 
+/* Thumbnails */
 .thumbnails {
   margin-left: -20px;
   list-style: none;
@@ -4941,6 +5051,9 @@ a.thumbnail:focus {
   color: #555555;
 }
 
+/* ---------------------------------- */
+
+/* Media-Related Objects */
 .media,
 .media-body {
   overflow: hidden;
@@ -4978,6 +5091,7 @@ a.thumbnail:focus {
   list-style: none;
 }
 
+/* Small Inline Indicators */
 .label,
 .badge {
   display: inline-block;
@@ -5081,6 +5195,9 @@ a.badge:focus {
   top: 0;
 }
 
+/* ---------------------------------- */
+
+/* Keyframe Animations */
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;
@@ -5126,6 +5243,9 @@ a.badge:focus {
   }
 }
 
+/* ---------------------------------- */
+
+/* Progress Bar Styling */
 .progress {
   height: 20px;
   margin-bottom: 20px;
@@ -5193,6 +5313,7 @@ a.badge:focus {
           background-size: 40px 40px;
 }
 
+/* Progress Bar Animation */
 .progress.active .bar {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
      -moz-animation: progress-bar-stripes 2s linear infinite;
@@ -5201,6 +5322,7 @@ a.badge:focus {
           animation: progress-bar-stripes 2s linear infinite;
 }
 
+/* Progress Danger */
 .progress-danger .bar,
 .progress .bar-danger {
   background-color: #dd514c;
@@ -5223,6 +5345,7 @@ a.badge:focus {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+/* Progress Bar Success */
 .progress-success .bar,
 .progress .bar-success {
   background-color: #5eb95e;
@@ -5245,6 +5368,7 @@ a.badge:focus {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+/* Progress Info Bar */
 .progress-info .bar,
 .progress .bar-info {
   background-color: #4bb1cf;
@@ -5267,6 +5391,7 @@ a.badge:focus {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+/* Progress Warning Bar */
 .progress-warning .bar,
 .progress .bar-warning {
   background-color: #faa732;
@@ -5289,6 +5414,9 @@ a.badge:focus {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+/* ---------------------------------- */
+
+/* Accordion Block */
 .accordion {
   margin-bottom: 20px;
 }
@@ -5319,6 +5447,7 @@ a.badge:focus {
   border-top: 1px solid #e5e5e5;
 }
 
+/* Carousel Styles */
 .carousel {
   position: relative;
   margin-bottom: 20px;
@@ -5384,6 +5513,9 @@ a.badge:focus {
   left: 100%;
 }
 
+/* ---------------------------------- */
+
+/* Carousel Controls */
 .carousel-control {
   position: absolute;
   top: 40%;
@@ -5443,6 +5575,7 @@ a.badge:focus {
   background-color: #fff;
 }
 
+/* Carousel Captions */
 .carousel-caption {
   position: absolute;
   right: 0;
@@ -5467,6 +5600,7 @@ a.badge:focus {
   margin-bottom: 0;
 }
 
+/* Hero Units */
 .hero-unit {
   padding: 60px;
   margin-bottom: 30px;
