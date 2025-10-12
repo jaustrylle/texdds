@@ -672,7 +672,7 @@ html {margin-top:33px !important;}
   //<![CDATA[
 	
 	//REVOLUTION SLIDER INITIALIZATION
-  $(document).ready(function() {
+  window.onload = function() {
     if ($.fn.cssOriginal!=undefined)
       $.fn.css = $.fn.cssOriginal;
     $('.fullwidthbanner').revolution(
