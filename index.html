@@ -286,116 +286,47 @@ html {margin-top:33px !important;}
 
 
 <!-- Slide 1 -->
-<li data-transition="slidedown" style="width:100%; height:100%; overflow:hidden; z-index:18; opacity:1;">
-
+<li data-transition="slidedown" style="width: 100%; height: 100%; overflow: hidden; z-index: 20; opacity: 1; visibility: visible; left: 0; top: 0;">
+    
     <!-- Background -->
-    <div class="slotholder">
-        <img src="assets/images/roadway.jpg" alt="" class="defaultimg" 
-             style="width:100%; height:550px; position:absolute; left:0; top:0; opacity:0;">
-    </div>
+    <div class="slotholder"></div>
 
-    <!-- Captions (centered) -->
+    <!-- Main Captions -->
     <div class="caption lfl stl bold bg rev-left tp-caption start"
-         data-x="center" data-hoffset="0" data-y="60"
-         data-speed="800" data-start="800" data-easing="easeOutExpo"
-         style="font-size:15px; padding:18px 22px 22px; transform:translateX(-50%); opacity:0;">
-        <h3 class="rev-title big bold">Texas Based, Texas Proud</h3>
+         data-x="center" data-hoffset="0"
+         data-y="60" data-speed="800" data-start="800"
+         data-easing="easeOutExpo"
+         style="font-size: 15px; padding: 18px 22px 22px;">
+        <!-- Example text -->
+        <strong>Texas Online Defensive Driving School</strong>
     </div>
 
-    <div class="caption lfl stl bold bg2 rev-left tp-caption start"
-         data-x="center" data-hoffset="0" data-y="180"
-         data-speed="800" data-start="1600" data-easing="easeOutExpo"
-         style="background-color:rgb(60,83,153); font-size:15px; padding:10px 12px 12px; transform:translateX(-50%); opacity:0;">
-        <h3 class="rev-title2 big bold">100% Video Based</h3>
+    <!-- Randy Pointing (Left) -->
+    <div class="tp-caption randy"
+         data-x="left" data-hoffset="50"
+         data-y="center" data-voffset="0"
+         data-speed="1000" data-start="2600"
+         data-easing="easeOutExpo">
+        <img src="assets/images/RandyPointing.png" alt="Randy Pointing" style="width: 600px; height: auto;">
     </div>
 
-    <div class="caption lfl stl bold bg2 rev-left tp-caption start"
-         data-x="center" data-hoffset="0" data-y="260"
-         data-speed="800" data-start="2100" data-easing="easeOutExpo"
-         style="font-size:15px; padding:10px 12px 12px; transform:translateX(-50%); opacity:0;">
-        <h3 class="rev-title2 big bold">Instant Certificate!</h3>
+    <!-- Texas A&M Student (Right) -->
+    <div class="tp-caption student"
+         data-x="right" data-hoffset="50"
+         data-y="center" data-voffset="0"
+         data-speed="1000" data-start="2600"
+         data-easing="easeOutExpo">
+        <img src="assets/images/texas_a_and_m_student-800.png" alt="Texas A&M Student" style="width: 600px; height: auto;">
     </div>
 
-	<!-- Randy Pointing (Left) -->
-	<div class="tp-caption randy"
-	     data-x="100" data-y="center" data-voffset="0"
-	     data-speed="1000" data-start="2600" data-easing="easeOutExpo">
-	  <img src="assets/images/RandyPointing.png" alt="Randy Pointing">
-	</div>
-	
-	<!-- Texas A&M Student (Right) -->
-	<div class="tp-caption student"
-	     data-x="right" data-hoffset="100" data-y="center" data-voffset="0"
-	     data-speed="1000" data-start="2600" data-easing="easeOutExpo">
-	  <img src="assets/images/texas_a_and_m_student-800.png" alt="Texas A&M Student">
-	</div>
-
-	 <!-- TEA Approved Certificate (moves with Randy) -->
+    <!-- $25 Button Example -->
     <div class="tp-caption lfl start"
-         data-x="0" data-hoffset="0" data-y="260"
-         data-speed="800" data-start="3500" data-easing="easeOutExpo"
-         style="transform:scale(1,1); opacity:1; left:0 !important; top:260px !important;">
-        <img src="assets/images/TEA-Approved-Online-Ticket-Dismissal.png" alt="" style="width:406px; height:274px;">
+         data-x="center" data-hoffset="0"
+         data-y="400" data-speed="800" data-start="4000"
+         data-easing="easeOutExpo">
+         <a href="#" class="btn btn-danger btn-lg">$25 Course</a>
     </div>
-
-    <!-- $25 Button -->
-    <div class="tp-caption lfl start"
-         data-x="center" data-hoffset="0" data-y="400"
-         data-speed="800" data-start="4000" data-easing="easeOutExpo"
-         style="transform:scale(1,1); opacity:1;">
-        <a target="_blank" href="https://stg.texdds.com/">
-            <img src="assets/images/btn_only25.png" alt="" style="width:454px; height:85px;">
-        </a>
-    </div>
-
 </li>
-
-<!-- Responsive CSS -->
-<style>
-/* Adjust Randy, TEA certificate, and A&M student for smaller screens */
-@media (max-width: 1200px) {
-    .tp-caption img {
-        max-width: 80%;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .tp-caption.lfl.start,
-    .tp-caption.lfr.start {
-        position: relative !important;
-        left: auto !important;
-        right: auto !important;
-        margin: 0 auto;
-        display: block;
-        text-align: center;
-    }
-
-    .tp-caption.lfl.start img,
-    .tp-caption.lfr.start img {
-        width: 70%;
-        height: auto;
-    }
-
-    /* Center TEA certificate below Randy */
-    .tp-caption.lfl.start + .tp-caption.lfl.start img {
-        margin-top: 20px;
-    }
-
-    /* Reduce captions size */
-    .caption h3 {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    /* Center $25 button */
-    .tp-caption.lfl.start a img {
-        width: 80%;
-        height: auto;
-    }
-}
-</style>
-
 
 
 
