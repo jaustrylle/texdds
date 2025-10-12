@@ -18,7 +18,7 @@
   <meta name="keywords" content="Texas Defensive Driving School, Driving School Texas, Texas approved defensive driving school, Texas online defensive driving school,  Defensive Driving Texas, Online driving school, National Defensive Driving, Defensive driving near me, Texas Defensive Driving, Traffic School Texas">
   <meta name="author" content="">
 
-<!-- -------------------------------------------------------------------------------------------------------------- -->
+	<!-- -------------------------------------------------------------------------------------------------------------- -->
 <!-- Google Fonts -->
 	<!-- Load Lato font in various weights -->
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@
 <!-- Load jQuery for DOM manipulation and event handling -->
 <script src="assets/js/jquery.min.js"></script>
 
-<!-- ----------------------------------------------------------------------------- -->
+	<!-- ----------------------------------------------------------------------------- -->
 							<!-- Inline CSS Styles -->
 <style>
 
@@ -96,7 +96,8 @@
 .corner-ribbon.red{background: #B2030C;}
 
 </style>
-<!-- ----------------------------------------------------------------------- -->
+	
+	<!-- ----------------------------------------------------------------------- -->
 						<!-- Legacy Browser Support -->
 <!-- Conditional comments for older versions of Internet Explorer -->
 		<!-- Add HTML support for IE<9, load IE7-compatible Font Awesome styles -->
@@ -137,37 +138,42 @@ html {margin-top:33px !important;}
 	
 </style> -->
 
-<!-- -------------------------------------------------------------------------------------- -->
-
-    <!-- Google Tag Manager -->
+	<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- Google Tag Manager -->
+	<!--Load GTM asynchronously, initialize dataLayer and insert GTM script into page, track analytics-->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M2BJP68W');</script>
 <!-- End Google Tag Manager -->
+
+	<!----------------------------------------------------------------------------------------------------->
+	
 </head>
-
-
 
 <body>
 
-<!--header-->
-
-
+	<!----------------------------------------------------------------------------------------------------->
+											<!--header-->
 <!-- Google Tag Manager (noscript) -->
+	<!--Ensure GTM still works for users with JavaScript disabled, embedds hidden iframe-->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2BJP68W"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-
+<!--Load another FontAwesome stylesheet, add 2nd Google site verification token-->
 <link rel="stylesheet" href="assets/css/font-awesome(1).min.css">
 <meta name="google-site-verification" content="Qs6uUewlyPd18_u3_4SBfNvY87MsDQkQk5KElK5hguc">
 
+	<!----------------------------------------------------------------------------------------------------->
 
+										<!--Main Dropdown Styles-->
+	
 <style>
-
+	
+/* White background, dark blue text, rounded corners, hover effects and smooth transitions for hover interactions */
 .menu_wrap .nav ul {
     background: #fff !important;
 	color: #03143A;
@@ -210,7 +216,11 @@ html {margin-top:33px !important;}
     transition: all 0.2s ease-in;
 }
 
+	/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 /*--- DROPDOWN ---*/
+	/* Target Superfish jQuery plugin classes (sf-menu) for dropdown behavior, hide submenus off-screen until hovered and add hover effects/styling for UX */
+	
 .nav sf-menu ul {
     background-color: #fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
     background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
@@ -240,13 +250,18 @@ html {margin-top:33px !important;}
 }
 </style>
 
+	<!--------------------------------------------------------------------------------------------------------------------------------------->
+  <!--Display site logo with link to homepage-->
 <div class="header">
   <!--logo-->
   <div class="container">
     <div class="logo">
       <a href="https://www.texdds.com/index.php"><img style="width: 220px; margin-top: 10px;" src="assets/images/TXDDS_logo.png" alt=""></a>
     </div>
+	  
     <!--menu-->
+	    <!--Unordered list (<ul>) for main navigation links, nested <ul> for dropdowns under "Services", each <li> links to different page/service
+	  		<select> dropdown to provide mobile-friendly navigation alternative -->
     <nav id="main_menu">
       <div class="menu_wrap">
         <ul class="nav sf-menu sf-js-enabled sf-arrows">
@@ -257,6 +272,7 @@ html {margin-top:33px !important;}
           <li class="last"><a href="https://www.texdds.com/texas_driving_school_online.php">Locations</a></li>
           <li class=""><a href="https://texdds.com/articles/" class="sf-with-ul">Services</a>
             <ul style="display: none;">
+				
             <li><a href="https://stg.texdds.com/"><i class="fa fa-star fa-spin" style="color:#A40F0F;" aria-hidden="true"></i>  $25 Texas Ticket Dismissal</a></li>
 
             <li><a href="https://stg.texdds.com/">Ticket Dismissal / Driver Record Bundle</a></li>
@@ -264,7 +280,6 @@ html {margin-top:33px !important;}
             <li><a href="https://stg.texdds.com/">Texas Insurance Discount</a></li>
             
             <li><a href="https://texdds.com/texas_drivers_education">Texas Drivers Education Course</a></li>
-
 
             </ul></li>
           <li class=""><a href="https://www.texdds.com/texas_approved_online_traffic_school.php">Contact</a></li>
