@@ -174,3 +174,11 @@ h1.intro {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* Maintain aspect ratio and scale with screen */
+.responsive-randy,
+.responsive-student {
+  width: 45vw;              /* 45% of viewport width */
+  max-width: 499px;         /* cap at original size */
+  height: auto;
+}
