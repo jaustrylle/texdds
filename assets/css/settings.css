@@ -817,32 +817,30 @@ website:   	https://www.themepunch.com
 						 -webkit-transform-origin: 50% 50%;
 					}
 
-/* Mirror Randy and Student symmetrically */
+/* Randy & Student Balanced Mirror Positioning */
 .tp-caption.randy,
 .tp-caption.student {
   position: absolute !important;
   top: 35px !important;
   z-index: 10;
-  transform: translateY(0);
 }
 
-/* Randy (far left, mirrored) */
+/* Randy: slightly inset from left */
 .tp-caption.randy {
-  left: 10% !important;         /* further left */
-  transform: translateX(-50%) !important;
+  left: 8% !important;        /* pull inward from edge */
+  transform: none !important; /* remove over-shift */
 }
 
-/* Student (far right, mirrored) */
+/* Student: slightly inset from right */
 .tp-caption.student {
-  right: 10% !important;        /* further right */
-  transform: translateX(50%) !important;
+  right: 8% !important;
+  transform: none !important;
 }
 
-/* Optional: make them scale gracefully on smaller screens */
+/* Responsive adjustments */
 @media (max-width: 1200px) {
   .tp-caption.randy,
   .tp-caption.student {
-    transform: none !important;
     left: 5% !important;
     right: 5% !important;
   }
@@ -861,7 +859,6 @@ website:   	https://www.themepunch.com
     margin: 0 auto;
     left: auto !important;
     right: auto !important;
-    transform: none !important;
     text-align: center;
   }
   .tp-caption.randy img,
