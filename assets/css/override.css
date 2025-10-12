@@ -175,12 +175,6 @@ h1.intro {
   visibility: visible !important;
 }
 
-/* Restore responsive image scaling, keep override structure but constrain image width */
-#rev-slider-wrapper .tp-caption img {
-  max-width: 45% !important;
-  height: auto !important;
-}
-
 /* Prevent layout breakage, media query for mobile */
 @media (max-width: 768px) {
   #rev-slider-wrapper .tp-caption img {
