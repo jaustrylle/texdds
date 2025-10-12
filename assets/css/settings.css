@@ -817,53 +817,48 @@ website:   	https://www.themepunch.com
 						 -webkit-transform-origin: 50% 50%;
 					}
 
-/* Randy & Student Balanced Mirror Positioning */
+/* Restore visibility and balance them */
 .tp-caption.randy,
 .tp-caption.student {
   position: absolute !important;
-  top: 35px !important;
-  z-index: 10;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 20 !important; /* make sure above background */
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-/* Randy: slightly inset from left */
+/* Randy — further left but still visible */
 .tp-caption.randy {
-  left: 8% !important;        /* pull inward from edge */
-  transform: none !important; /* remove over-shift */
+  left: 2% !important; /* 0% = edge, 2% = just inside */
 }
 
-/* Student: slightly inset from right */
+/* Student — further right */
 .tp-caption.student {
-  right: 8% !important;
-  transform: none !important;
+  right: 2% !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .tp-caption.randy,
-  .tp-caption.student {
-    left: 5% !important;
-    right: 5% !important;
-  }
-  .tp-caption.randy img,
-  .tp-caption.student img {
-    width: 80%;
-    height: auto;
-  }
+/* Responsive tweak */
+@media (max-width: 1024px) {
+  .tp-caption.randy { left: 5% !important; }
+  .tp-caption.student { right: 5% !important; }
 }
 
 @media (max-width: 768px) {
   .tp-caption.randy,
   .tp-caption.student {
     position: relative !important;
-    display: block;
-    margin: 0 auto;
     left: auto !important;
     right: auto !important;
+    transform: none !important;
+    margin: 0 auto;
     text-align: center;
+    display: block;
   }
+
   .tp-caption.randy img,
   .tp-caption.student img {
-    width: 65%;
+    width: 70%;
+    height: auto;
   }
 }
-
