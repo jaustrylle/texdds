@@ -321,54 +321,52 @@ html {margin-top:33px !important;}
     <!-- Background -->
     <div class="slotholder">
         <img src="assets/images/roadway.jpg" alt="" class="defaultimg" 
-             style="width:100%; height:550px; position:absolute; left:0; top:0; opacity:0;">
+             style="width:100%; height:550px; position:absolute; left:0; top:0;">
     </div>
 
-    <!-- Captions (centered) -->
+    <!-- Captions -->
     <div class="caption lfl stl bold bg rev-left tp-caption start"
          data-x="center" data-hoffset="0" data-y="60"
          data-speed="800" data-start="800" data-easing="easeOutExpo"
-         style="font-size:15px; padding:18px 22px 22px; transform:translateX(-50%); opacity:0;">
+         style="font-size:15px; padding:18px 22px 22px;">
         <h3 class="rev-title big bold">Texas Based, Texas Proud</h3>
     </div>
 
     <div class="caption lfl stl bold bg2 rev-left tp-caption start"
          data-x="center" data-hoffset="0" data-y="180"
          data-speed="800" data-start="1600" data-easing="easeOutExpo"
-         style="background-color:rgb(60,83,153); font-size:15px; padding:10px 12px 12px; transform:translateX(-50%); opacity:0;">
+         style="background-color:rgb(60,83,153); font-size:15px; padding:10px 12px 12px;">
         <h3 class="rev-title2 big bold">100% Video Based</h3>
     </div>
 
     <div class="caption lfl stl bold bg2 rev-left tp-caption start"
          data-x="center" data-hoffset="0" data-y="260"
          data-speed="800" data-start="2100" data-easing="easeOutExpo"
-         style="font-size:15px; padding:10px 12px 12px; transform:translateX(-50%); opacity:0;">
+         style="font-size:15px; padding:10px 12px 12px;">
         <h3 class="rev-title2 big bold">Instant Certificate!</h3>
     </div>
 
-	<!-- Randy Pointing (left) -->
-	<div class="tp-caption lfl start"
-	     data-x="-250" 
-	     data-y="35"
-	     data-speed="1000" data-start="2600" data-easing="easeOutExpo"
-	     style="transform:scale(1,1); opacity:1;">
-	    <img src="assets/images/RandyPointing.png" alt="" style="width:499px; height:570px;">
-	</div>
-
-    <!-- TEA Approved Certificate (moves with Randy) -->
+    <!-- GROUP: Randy + TEA Approved -->
     <div class="tp-caption lfl start"
-         data-x="0" data-hoffset="0" data-y="260"
-         data-speed="800" data-start="3500" data-easing="easeOutExpo"
-         style="transform:scale(1,1); opacity:1; left:0 !important; top:260px !important;">
-        <img src="assets/images/TEA-Approved-Online-Ticket-Dismissal.png" alt="" style="width:406px; height:274px;">
+         data-x="100" data-y="35"
+         data-speed="1000" data-start="2600" data-easing="easeOutExpo"
+         style="transform:scale(1,1); opacity:1;">
+        <div style="position:relative; display:inline-block;">
+            <img src="assets/images/RandyPointing.png" alt="" 
+                 style="width:499px; height:570px;">
+            <img src="assets/images/TEA-Approved-Online-Ticket-Dismissal.png" alt=""
+                 style="width:406px; height:274px; position:absolute; bottom:60px; left:320px;">
+        </div>
     </div>
 
-    <!-- Texas A&M student (right) -->
+    <!-- Texas A&M student (mirrors Randy, comes in from right) -->
     <div class="tp-caption lfr start"
-         data-x="right" data-hoffset="0" data-y="35"
+         data-x="right" data-hoffset="-100" data-y="35"
          data-speed="1000" data-start="2600" data-easing="easeOutExpo"
-         style="transform:scale(1,1); opacity:1; right:0 !important; top:35px !important;">
-        <img src="assets/images/texas_a_and_m_student-800.png" alt="" style="width:499px; height:570px;">
+         data-end="99999"  <!-- prevents looping/reset -->
+         style="transform:scale(1,1); opacity:1;">
+        <img src="assets/images/texas_a_and_m_student-800.png" alt="" 
+             style="width:499px; height:570px;">
     </div>
 
     <!-- $25 Button -->
@@ -382,6 +380,7 @@ html {margin-top:33px !important;}
     </div>
 
 </li>
+
 
 
 <!-- SLIDE 2 -->
