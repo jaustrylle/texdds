@@ -33,6 +33,7 @@ website:   	https://www.themepunch.com
 	-	CAPTIONS	-
 **************************/
 
+/* Style text captions for slider component */
 .tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important;}
 
 .tp-caption { z-index:1;}
@@ -344,9 +345,6 @@ website:   	https://www.themepunch.com
 			white-space:nowrap;		
 		}
 
-					
-					
-					
 
 .tp-caption.boxshadow{
 		-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -367,6 +365,7 @@ website:   	https://www.themepunch.com
 		text-shadow: none;
 	}
 
+/* Behavior for Slider Component */
 .tp-caption a {
 	color: #ff7302; text-shadow: none;	-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;
 }
@@ -816,29 +815,3 @@ website:   	https://www.themepunch.com
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
 					}
-
-.tp-caption.randy,
-.tp-caption.student {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 50 !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Move them further apart */
-.tp-caption.randy {
-  left: 2% !important;   /* closer to edge */
-}
-
-.tp-caption.student {
-  right: 2% !important;  /* closer to opposite edge */
-}
-
-/* Keep responsive */
-@media (max-width: 1024px) {
-  .tp-caption.randy { left: 5% !important; }
-  .tp-caption.student { right: 5% !important; }
-}
-
