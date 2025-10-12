@@ -178,7 +178,7 @@ h1.intro {
 /* Prevent layout breakage, media query for mobile */
 @media (max-width: 768px) {
   #rev-slider-wrapper .tp-caption img {
-    max-width: 90% !important;
+    width: 400px% !important;
     height: auto !important;
   }
   .tp-caption[data-hoffset] {
