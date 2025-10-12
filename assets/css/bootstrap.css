@@ -8,10 +8,13 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+/* --------------------------------------------------------------------------------- */
+/* Ensure floated child elements properly contained within parent, clearfix hack for older browsers */
 .clearfix { *zoom: 1; }
 .clearfix:before, .clearfix:after { display: table;  line-height: 0; content: ""; }
 .clearfix:after { clear: both; }
 
+/* Hide text visually, but keep accessible to screen readers, can use to replace text with background img or icons */
 .hide-text {
   font: 0/0 a;
   color: transparent;
@@ -20,6 +23,7 @@
   border: 0;
 }
 
+/* Make form input span full width, respect padding/border sizing, ensure consistent sizing across browsers */
 .input-block-level {
   display: block;
   width: 100%;
@@ -29,6 +33,7 @@
           box-sizing: border-box;
 }
 
+/* Normalize HTML semantic elements for older browsers */
 article,
 aside,
 details,
@@ -42,6 +47,7 @@ section {
   display: block;
 }
 
+/* Ensure media elements behave consistently across browsers, hides <audio> elements without controls */
 audio,
 canvas,
 video {
@@ -52,12 +58,14 @@ video {
 
 audio:not([controls]) { display: none; }
 
+/* Prevent mobile browsers from automatically resizing text */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
+/* Style focused links, remove outline on hover/active */
 a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
@@ -66,6 +74,7 @@ a:focus {
 
 a:hover, a:active { outline: 0; }
 
+/* Style <sub> and <sup> foor vertical alignment & reduced font size */
 sub,
 sup {
   position: relative;
@@ -82,6 +91,7 @@ sub {
   bottom: -0.25em;
 }
 
+/* Make images responsive, remove borders, align vertically, prevent IE image scaling issues */
 img {
   width: auto\9;
   height: auto;
@@ -96,6 +106,8 @@ img {
   max-width: none;
 }
 
+/* Remove default margins, ensure consistent font sizing, fix overflow & line-height quirks in older browsers
+	remove Firefox inner padding/border, ensure buttons stay like native buttons*/
 button,
 input,
 select,
@@ -125,6 +137,8 @@ input[type="submit"] {
   -webkit-appearance: button;
 }
 
+/* ------------------------------------- */
+/* Ensure interactive elements show a pointer cursor on hover */
 label,
 select,
 button,
@@ -136,6 +150,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+/* Remove default styling quirks from search inputs, ensure consistent sizing, disable built-in decorations */
 input[type="search"] {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
@@ -148,11 +163,13 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+/* Allow scrollbars to appear when content overflows, align text areas properly with surrounding elements */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
+/* Optimizes page for printing */
 @media print {
   * {
     color: #000 !important;
@@ -205,6 +222,7 @@ textarea {
   }
 }
 
+/* Set base font and layout, uses sans-serif stack for cross-platform consistency */
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -214,6 +232,7 @@ body {
   background-color: #ffffff;
 }
 
+/* Blue links by default, darker blue & underline on hover/focus */
 a {
   color: #0088cc;
   text-decoration: none;
@@ -225,6 +244,7 @@ a:focus {
   text-decoration: underline;
 }
 
+/* Rounded corners, polaroid style, circular images */
 .img-rounded {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -247,6 +267,7 @@ a:focus {
           border-radius: 500px;
 }
 
+/* Create horizontal row with clearfix to contain floated columns */
 .row {
   margin-left: -20px;
   *zoom: 1;
@@ -263,12 +284,14 @@ a:focus {
   clear: both;
 }
 
+/* Floats columns and spaces evenly */
 [class*="span"] {
   float: left;
   min-height: 1px;
   margin-left: 20px;
 }
 
+/* Define 12-column grid with fixed panel widths (legacy Bootstrap 2 style) */
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -324,6 +347,8 @@ a:focus {
   width: 60px;
 }
 
+/* ------------------------------------- */
+/* Manually shift elements to right by fixed # of pixels, create horizontal spacing in 12-column layout, pre-flexbox Bootstrap style */
 .offset12 {
   margin-left: 980px;
 }
@@ -372,6 +397,7 @@ a:focus {
   margin-left: 100px;
 }
 
+/* Create full-width row with clearfixx to contain floated columns, ensure layout integrity across browsers */
 .row-fluid {
   width: 100%;
   *zoom: 1;
@@ -408,6 +434,7 @@ a:focus {
   margin-left: 2.127659574468085%;
 }
 
+/* Define %-based widths for each column span, allow responsive resizing across screen sizes, IE-specific fallback widths using *width */
 .row-fluid .span12 {
   width: 100%;
   *width: 99.94680851063829%;
@@ -468,6 +495,7 @@ a:focus {
   *width: 6.329787234042553%;
 }
 
+/* Add horizontal spacing to fluid columns, special handling first-child elements to avoid double margins */
 .row-fluid .offset12 {
   margin-left: 104.25531914893617%;
   *margin-left: 104.14893617021275%;
@@ -588,16 +616,19 @@ a:focus {
   *margin-left: 8.404255319148938%;
 }
 
+/* Hide any span element, use for conditional visibility */
 [class*="span"].hide,
 .row-fluid [class*="span"].hide {
   display: none;
 }
 
+/* Float span elements to right */
 [class*="span"].pull-right,
 .row-fluid [class*="span"].pull-right {
   float: right;
 }
 
+/* Center content horizontally, use clearfix to contain floated children */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -615,6 +646,7 @@ a:focus {
   clear: both;
 }
 
+/* Full-width container with padding, layout to span entire viewport */
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
@@ -632,10 +664,13 @@ a:focus {
   clear: both;
 }
 
+/* Add bottom spacing between paragraphs for readability */
 p {
   margin: 0 0 10px;
 }
 
+/* -------------------------------------------------------- */
+/* Intro/standout paragraphs, larger font, lighter weight & generous spacing */
 .lead {
   margin-bottom: 20px;
   font-size: 21px;
@@ -643,6 +678,7 @@ p {
   line-height: 30px;
 }
 
+/* Style semantic inline tags */
 small {
   font-size: 85%;
 }
@@ -659,6 +695,7 @@ cite {
   font-style: normal;
 }
 
+/* Semantic color classes for status indicators */
 .muted {
   color: #999999;
 }
@@ -672,6 +709,7 @@ a.muted:focus {
   color: #c09853;
 }
 
+/* Define hover states for colored links */
 a.text-warning:hover,
 a.text-warning:focus {
   color: #a47e3c;
@@ -704,6 +742,7 @@ a.text-success:focus {
   color: #356635;
 }
 
+/* Utility classes for aligning text */
 .text-left {
   text-align: left;
 }
@@ -716,6 +755,7 @@ a.text-success:focus {
   text-align: center;
 }
 
+/* Set font sizes and spacing for headings, "small" inside headings styled lighter/smaller */
 h1,
 h2,
 h3,
@@ -787,12 +827,14 @@ h4 small {
   font-size: 14px;
 }
 
+/* Separate sections with horizontal rule */
 .page-header {
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #eeeeee;
 }
 
+/* Standard & unstyled lists, inline lists for horizontal navigation/tags */
 ul,
 ol {
   padding: 0;
@@ -835,6 +877,7 @@ dl {
   margin-bottom: 20px;
 }
 
+/* Styles for <dl> elements */
 dt,
 dd {
   line-height: 20px;
@@ -877,6 +920,7 @@ dd {
   margin-left: 180px;
 }
 
+/* Create subtle divider between sections */
 hr {
   margin: 20px 0;
   border: 0;
@@ -884,6 +928,7 @@ hr {
   border-bottom: 1px solid #ffffff;
 }
 
+/* Add tooltip and styling for <abbr> elements */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -895,6 +940,7 @@ abbr.initialism {
   text-transform: uppercase;
 }
 
+/* Style quotes with indentation & vertical bar, attribution styled with subtle prefix */
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 20px;
@@ -918,6 +964,7 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 
+/* Right-aligned blockquote layout variation */
 blockquote.pull-right {
   float: right;
   padding-right: 15px;
@@ -946,6 +993,7 @@ blockquote:after {
   content: "";
 }
 
+/* Styles contact info/location blocks */
 address {
   display: block;
   margin-bottom: 20px;
@@ -953,6 +1001,8 @@ address {
   line-height: 20px;
 }
 
+/* -------------------------------------------------------- */
+/* Set consistent font & rounded corners for code snippets */
 code,
 pre {
   padding: 0 3px 2px;
@@ -964,6 +1014,7 @@ pre {
           border-radius: 3px;
 }
 
+/* Inline code styling with light background, red text & compact spacing */
 code {
   padding: 2px 4px;
   color: #d14;
@@ -972,6 +1023,7 @@ code {
   border: 1px solid #e1e1e8;
 }
 
+/* Block-level code styling- scrollable, wrapped text */
 pre {
   display: block;
   padding: 9.5px;
@@ -1003,11 +1055,13 @@ pre code {
   border: 0;
 }
 
+/* Long code blocks vertically scrollable */
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
 }
 
+/* Form layout with styled headings */
 form {
   margin: 0 0 20px;
 }
@@ -1035,6 +1089,7 @@ legend small {
   color: #999999;
 }
 
+/* Typography */
 label,
 input,
 button,
@@ -1087,6 +1142,7 @@ input[type="color"],
           border-radius: 4px;
 }
 
+/* Inputs and textareas */
 input,
 textarea,
 .uneditable-input {
@@ -1124,6 +1180,7 @@ input[type="color"],
           transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
+/* Add blue glow and border on focus for UX */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1168,6 +1225,7 @@ input[type="checkbox"] {
   width: auto;
 }
 
+/* Selects */
 select,
 input[type="file"] {
   height: 30px;
@@ -1210,6 +1268,7 @@ input[type="checkbox"]:focus {
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
 }
 
+/* Read-only fields with subdued styling */
 .uneditable-input {
   overflow: hidden;
   white-space: nowrap;
@@ -1230,11 +1289,13 @@ textarea:-ms-input-placeholder {
   color: #999999;
 }
 
+/* Style placeholder text consistently across browsers */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #999999;
 }
 
+/* Layout */
 .radio,
 .checkbox {
   min-height: 20px;
@@ -1252,6 +1313,7 @@ textarea::-webkit-input-placeholder {
   padding-top: 5px;
 }
 
+/* Allow horizontal alignment of radio/checkbox options */
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
@@ -1265,6 +1327,9 @@ textarea::-webkit-input-placeholder {
   margin-left: 10px;
 }
 
+/* -------------------------------------------------------- */
+
+/* Define fixed widths for input elements */
 .input-mini {
   width: 60px;
 }
@@ -1289,6 +1354,7 @@ textarea::-webkit-input-placeholder {
   width: 530px;
 }
 
+/* Remove default float and left margin to reset layout, ensure consistent alignment across diff input types, .row-fluid variants for fluid grid layouts */
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
@@ -1301,6 +1367,7 @@ textarea[class*="span"],
   margin-left: 0;
 }
 
+/* Ensure inputs with elements stay inline, prevent block-level stacking that break layouts */
 .input-append input[class*="span"],
 .input-append .uneditable-input[class*="span"],
 .input-prepend input[class*="span"],
@@ -1314,16 +1381,19 @@ textarea[class*="span"],
   display: inline-block;
 }
 
+/* Remove any default left margin to align inputs flush with container edges */
 input,
 textarea,
 .uneditable-input {
   margin-left: 0;
 }
 
+/* Add horizontal spacing between adjacent grid columns inside .controls-row */
 .controls-row [class*="span"] + [class*="span"] {
   margin-left: 20px;
 }
 
+/* Mimic 12-column grid system, size inputs proportionally within layout */
 input.span12,
 textarea.span12,
 .uneditable-input.span12 {
@@ -1396,6 +1466,7 @@ textarea.span1,
   width: 46px;
 }
 
+/* Implement clearfix to contain floated children, ensure .controls-row wraps contents */
 .controls-row {
   *zoom: 1;
 }
@@ -1411,15 +1482,19 @@ textarea.span1,
   clear: both;
 }
 
+/* Float grid columns left for horizontal layout */
 .controls-row [class*="span"],
 .row-fluid .controls-row [class*="span"] {
   float: left;
 }
 
+/* Vertically align checkboxes and radio buttons with other inputs */
 .controls-row .checkbox[class*="span"],
 .controls-row .radio[class*="span"] {
   padding-top: 5px;
 }
+
+/* -------------------------------------------------------- */
 
 input[disabled],
 select[disabled],
@@ -1805,6 +1880,8 @@ select:focus:invalid:focus {
 .input-prepend.input-append .btn-group:first-child {
   margin-left: 0;
 }
+
+------fdas-----------------------------------------------
 
 input.search-query {
   padding-right: 14px;
