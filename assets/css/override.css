@@ -138,3 +138,33 @@ h1.intro {
 /* Responsive Video Embeds- 16:9 aspect ration, scale responsively */
 .videowrapper { float: none; clear: both; width: 100%; position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; }
 .videowrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Dedicated container wrapper for revolution slider to move images */
+#rev-slider-wrapper,
+#rev-slider-wrapper * {
+  box-sizing: content-box !important;
+}
+
+#rev-slider-wrapper .tp-caption,
+#rev-slider-wrapper .tp-simpleresponsive img {
+  max-width: none !important;
+  height: auto !important;
+}
+
+#rev-slider-wrapper .tp-caption {
+  position: absolute !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#rev-slider-wrapper .tp-caption img {
+  display: inline-block !important;
+}
+
+#rev-slider-wrapper .container,
+#rev-slider-wrapper .row,
+#rev-slider-wrapper [class*="span"] {
+  width: auto !important;
+  margin: 0 !important;
+  float: none !important;
+}
