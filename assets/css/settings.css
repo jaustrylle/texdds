@@ -817,48 +817,28 @@ website:   	https://www.themepunch.com
 						 -webkit-transform-origin: 50% 50%;
 					}
 
-/* Restore visibility and balance them */
 .tp-caption.randy,
 .tp-caption.student {
   position: absolute !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
-  z-index: 20 !important; /* make sure above background */
+  z-index: 50 !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-/* Randy — further left but still visible */
+/* Move them further apart */
 .tp-caption.randy {
-  left: 2% !important; /* 0% = edge, 2% = just inside */
+  left: 2% !important;   /* closer to edge */
 }
 
-/* Student — further right */
 .tp-caption.student {
-  right: 2% !important;
+  right: 2% !important;  /* closer to opposite edge */
 }
 
-/* Responsive tweak */
+/* Keep responsive */
 @media (max-width: 1024px) {
   .tp-caption.randy { left: 5% !important; }
   .tp-caption.student { right: 5% !important; }
 }
 
-@media (max-width: 768px) {
-  .tp-caption.randy,
-  .tp-caption.student {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-  }
-
-  .tp-caption.randy img,
-  .tp-caption.student img {
-    width: 70%;
-    height: auto;
-  }
-}
