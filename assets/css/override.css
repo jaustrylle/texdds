@@ -207,3 +207,15 @@ h1.intro {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* Ensures slide and captions are visible */
+.tp-simpleresponsive .tp-caption,
+.tp-simpleresponsive .caption {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.tp-simpleresponsive > ul > li,
+.fullwidthbanner ul {
+  visibility: visible !important;
+}
