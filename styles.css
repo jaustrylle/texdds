@@ -1,0 +1,431 @@
+/* ================= Reset & Base ================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  color: #500000;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= Top Utility Bar ================= */
+.top-bar {
+  background: #f5f5f5;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.top-logo {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.top-text {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+.top-right a {
+  margin-left: 1em;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.top-right a:hover {
+  color: #333;
+}
+
+/* ================= Header ================= */
+.site-header {
+  background: #03143A;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo img {
+  width: 230px;
+  height: auto;
+  display: inline-block;
+  border: none;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin-left: 1.5em;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+/* ================= Hero Carousel ================= */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-carousel .slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-carousel .slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ================= Hero Carousel Layout ================= */
+.hero-carousel .slide-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 5%;
+  box-sizing: border-box;
+}
+
+/* Image positioning */
+.hero-carousel .slide-image {
+  position: absolute;
+  bottom: -30;
+  max-width: 35%;
+}
+
+.hero-carousel .slide-image.left {
+  left: 5%;
+}
+
+.hero-carousel .slide-image.right {
+  right: 5%;
+}
+
+/* Ensure images stay anchored relative to background */
+.hero-carousel .slide-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: small hover effect */
+.hero-carousel .slide-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-carousel .slide-image {
+    display: none;
+  }
+  .hero-carousel .slide-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+
+/* Overlay text */
+.hero-carousel .overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-carousel .overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-carousel .overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background-color: #500000;
+  color: #fff;
+  padding: 0.9em 1.8em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a81818;
+  transform: scale(1.05);
+}
+
+/* Flex layout for slide with image & text */
+.slide-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 5%;
+  gap: 3%;
+}
+
+.slide-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 95px;
+}
+
+.slide-text {
+  color: white;
+  max-width: 600px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* Navigation arrows */
+.carousel-controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.carousel-controls .prev { left: 1em; }
+.carousel-controls .next { right: 1em; }
+
+/* Dots navigation */
+.carousel-dots {
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6em;
+}
+
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background: #fff;
+}
+
+/* Map pin */
+.map-pin {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #e63946;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.8);
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+  z-index: 10;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* ================= Courses ================= */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.card h3 { margin-top: 0; }
+
+.price {
+  font-size: 1.5rem;
+  color: #8A1538;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #500000;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #111;
+  transform: scale(1.05);
+}
+
+/* ================= News & Testimonials ================= */
+.news-grid, .testimonials .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.news-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #500000;
+  padding-left: 1rem;
+}
+
+/* ================= Footer ================= */
+.site-footer {
+  background: #222;
+  color: #ccc;
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-col h4 { color: #fff; }
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+  .slide-inner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slide-image img { 
+    max-width: 60%; 
+    margin-bottom: 1em; 
+    margin-top: 20px; /* push the man image down */
+  }
+
+  .slide-text { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .navbar ul { flex-direction: column; gap: 0.8rem; }
+  .hero-carousel .overlay h1 { font-size: 2rem; }
+  .hero-carousel .overlay p { font-size: 1rem; }
+}
